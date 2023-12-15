@@ -1,0 +1,9 @@
+.ekart--top-header{
+    height: 4vh;
+    background-color: #28282b;
+    text-align: center;
+    color: white;
+    padding-top: 1.2vh;
+    font-size: 13px;
+    font-weight: bold;
+}
