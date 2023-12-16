@@ -1,0 +1,13 @@
+<div class="ekart--search--product">
+  <input
+    type="text"
+    class="ekart-search-product-input"
+    [(ngModel)]="searchText"
+  />
+  <button class="btn btn-search">Buscar</button>
+</div>
+<div class="e-kart-search-result-for">
+  <div *ngIf="searchText">
+    <p><strong>Resultado de búsqueda para: </strong> {{ searchText }}</p>
+  </div>
+</div>
