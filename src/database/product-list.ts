@@ -1,4 +1,6 @@
-products = [
+import { Product } from "../app/models/Product";
+
+export const products: Product[] = [
     {
       id: 1,
       name: "Nike React Infinity Run Flyknit",
@@ -53,7 +55,7 @@ products = [
       gender: "WOMEN",
       category: "RUNNING",
       size: [6, 7, 8, 9, 10],
-      color: ["White", , "Brown", "Red"],
+      color: ["White", "Brown", "Red"],
       price: 180,
       discountPrice:140,
       is_in_inventory: false,
