@@ -4,7 +4,13 @@
     class="ekart-search-product-input"
     [(ngModel)]="searchText"
   />
-  <button class="btn btn-search">Buscar</button>
+  <button
+    class="btn"
+    [ngClass]="{'btn-search': searchText, 'btn-search-disabled': !searchText}"
+    [disabled]="!searchText"
+  >
+    Buscar
+  </button>
 </div>
 <div class="e-kart-search-result-for">
   <div *ngIf="searchText">

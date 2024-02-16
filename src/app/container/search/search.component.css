@@ -27,6 +27,16 @@
   color: #fff;
 }
 
+.btn-search-disabled{
+  padding: 12px 30px;
+  background-color: #aaa;
+  margin-left: -1px;
+  margin-bottom: 5px;
+  color: #999;
+  border: #aaa 1px solid;
+  cursor: not-allowed;
+}
+
 .ekar-search-result-for {
     text-align: center;
   margin: 20px auto;
