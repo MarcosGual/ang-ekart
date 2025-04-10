@@ -13,7 +13,7 @@
   </button>
 </div>
 <div class="e-kart-search-result-for">
-  <div *ngIf="searchText">
+  <div *ngIf="searchText.length>1">
     <p><strong>Resultado de búsqueda para: </strong> {{ searchText }}</p>
   </div>
 </div>
