@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { products } from '../../../database/product-list';
 import { Product } from '../../models/Product';
 
@@ -10,6 +10,7 @@ import { Product } from '../../models/Product';
 export class ProductListComponent {
   selectedFilterRadioButton: string = 'all';
   products: Product[] = products;
+  @Input() searchText: string = "";
 
   productsInStock = products.filter((p) => p.is_in_inventory === true).length;
   productsOutOfStock = products.filter((p) => p.is_in_inventory === false)

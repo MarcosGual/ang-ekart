@@ -1,25 +1,4 @@
 <div class="ekart--product--container">
-  <!-- <img [src]="product.pImage" />
-  <p>{{ product.name }}</p>
-  <p>$ {{ product.price }}</p>
-  <p>{{ product.color }}</p>
-  <p>Discounted Price: {{ getDiscountedPrice().toFixed(2) }}</p>
-  <p>
-    {{
-      product.inStock > 0
-        ? product.inStock > 1
-          ? "Quedan sólo " + product.inStock + " unidades."
-          : "Queda sólo una unidad."
-        : "Producto Agotado"
-    }}
-  </p>
-  <button class="btn btn-danger btn-sm" (click)="decrementCartValue()">-</button>
-  {{ addToCart }}
-  <button class="btn btn-primary btn-sm" (click)="incrementCartValue()" [disabled]="!(product.inStock > 0)">
-    +
-  </button> -->
-  <app-search></app-search>
-  <product-list></product-list>
+  <app-search (searchTextChanged)="setSearchText($event)"></app-search>
+  <product-list [searchText]="searchText"></product-list>
 </div>
-
-<!-- Disabled, Hidden, Checked utilizamos property binding -->
