@@ -10,6 +10,8 @@ import { Product } from '../../models/Product';
 export class ProductListComponent {
   selectedFilterRadioButton: string = 'all';
   products: Product[] = products;
+  selectedProduct: Product;
+
   @Input() searchText: string = "";
 
   productsInStock = products.filter((p) => p.is_in_inventory === true).length;
@@ -17,7 +19,7 @@ export class ProductListComponent {
     .length;
 
   onFilterChanged(value: string) {
-    console.log('on filter activated - ' + value);
+    // console.log('on filter activated - ' + value);
     this.selectedFilterRadioButton = value;
   }
 }
