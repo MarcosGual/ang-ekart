@@ -15,7 +15,12 @@ export class SearchComponent {
     this.searchText = event.target?.value;
   }
 
-  onSearchTextChange(){
+  onSearchTextChange() {
+    this.searchTextChanged.emit(this.searchText);
+  }
+
+  onSearchButtonClick(inputElement: HTMLInputElement) {
+    this.searchText = inputElement.value;
     this.searchTextChanged.emit(this.searchText);
   }
 }
