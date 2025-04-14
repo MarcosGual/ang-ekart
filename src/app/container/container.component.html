@@ -1,5 +1,42 @@
 <div class="ekart--product--container">
   <app-search (searchTextChanged)="setSearchText($event)"></app-search>
   <product-list [searchText]="searchText" #productListComponent></product-list>
-  <product-details *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></product-details>
+  <product-details
+    *ngIf="productListComponent.selectedProduct"
+    [productListComp]="productListComponent"
+  ></product-details>
+
+  <div class="ekart-featured-products">
+    <div class="ekart-featured-product-heading">
+      <h1>Novedades en Marcas Populares</h1>
+    </div>
+
+    <div class="ekart-featured-product-item">
+      <h3 class="title">Novedades de Nike</h3>
+      <p class="description">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque aliquam
+        quibusdam provident voluptatibus reiciendis eligendi facere earum fugiat
+        commodi saepe? Ipsam id quis magnam tempore nesciunt asperiores illum
+        quos accusantium.
+      </p>
+    </div>
+    <div class="ekart-featured-product-item">
+      <h3 class="title">Novedades de Adidas</h3>
+      <p class="description">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque aliquam
+        quibusdam provident voluptatibus reiciendis eligendi facere earum fugiat
+        commodi saepe? Ipsam id quis magnam tempore nesciunt asperiores illum
+        quos accusantium.
+      </p>
+    </div>
+    <div class="ekart-featured-product-item">
+      <h3 class="title">Novedades de Rebook</h3>
+      <p class="description">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque aliquam
+        quibusdam provident voluptatibus reiciendis eligendi facere earum fugiat
+        commodi saepe? Ipsam id quis magnam tempore nesciunt asperiores illum
+        quos accusantium.
+      </p>
+    </div>
+  </div>
 </div>

@@ -23,7 +23,8 @@
 
 .ekart--bottom--bar {
   display: flex;
-  /* justify-content: space-around; */
+  /* justify-content: center; */
+  padding-left: 7vw;
 }
 
 .ekart--search-bar {
