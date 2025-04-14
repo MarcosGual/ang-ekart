@@ -5,15 +5,7 @@
   (selectedFilterRadioChanged)="onFilterChanged($event)"
 ></app-filter>
 <div class="ekart--products--container">
-  {{ searchText }}
-  <div *ngFor="let product of products">
-    <!-- <app-product
-      [product]="product"
-      *ngIf="
-        selectedFilterRadioButton === 'all' ||
-        product.is_in_inventory.toString() === selectedFilterRadioButton
-      "
-    ></app-product> -->
+  <div *ngFor="let product of products" (click)="selectedProduct = product">
     <app-product
       [product]="product"
       *ngIf="
@@ -23,3 +15,13 @@
     ></app-product>
   </div>
 </div>
+
+<!-- viejo filtro (stock / sin stock) -->
+
+<!-- <app-product
+      [product]="product"
+      *ngIf="
+        selectedFilterRadioButton === 'all' ||
+        product.is_in_inventory.toString() === selectedFilterRadioButton
+      "
+    ></app-product> -->

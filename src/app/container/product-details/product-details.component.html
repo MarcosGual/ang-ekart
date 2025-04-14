@@ -1,0 +1,73 @@
+<div class="ekart-product-details-info scroll">
+  <div class="ekart-product-detail-close">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </div>
+  <div class="ekart-product-details-image">
+    <img
+      [src]="product.imageURL"
+      alt="zapatillas vans"
+      class="ekart-product-details-image"
+    />
+  </div>
+
+  <div class="ekart-product-details">
+    <div class="ekart-product-details-name">
+      <h2>{{ product.name }}</h2>
+    </div>
+    <div class="ekart-product-details-gbc">
+      <span>{{ product.gender }}</span>
+      <span>{{ product.brand }}</span>
+      <span>{{ product.category }}</span>
+    </div>
+    <div class="ekart-product-details-price">
+      <p>
+        <b>Precio por Par:</b>
+        <span style="background-color: red; color: white"
+          ><s>${{ product.price }}</s></span
+        >
+        <span style="background-color: green; color: white"
+          >${{ product.discountPrice }}</span
+        >
+        (Impuestos incluidos)
+      </p>
+    </div>
+    <div class="ekart-product-details-size">
+      <div style="padding: 5px 0px; border-bottom: #ccc 2px solid">
+        <h4>Tamaños Disponibles</h4>
+      </div>
+      <div style="margin-top: 20px">
+        <span
+          class="ekart-product-details-available-size"
+          *ngFor="let size of product.size"
+          >{{ size }}</span
+        >
+      </div>
+    </div>
+    <div class="ekart-product-detail-color">
+      <div style="padding: 5px 0px; border-bottom: #ccc 2px solid">
+        <h4>Available Color</h4>
+      </div>
+      <div style="margin-top: 20px">
+        <span
+          *ngFor="let color of product.color"
+          class="ekart-product-detail-available-color"
+          [ngStyle]="{ 'background-color': color.toLowerCase(), 'border': 'solid 1px black'}"
+          [title]="color"
+        ></span>
+      </div>
+    </div>
+
+    <div class="ekart-product-detail-desc">
+      <div style="padding: 5px 0px; border-bottom: #ccc 2px solid">
+        <h4>Descripción del Producto</h4>
+      </div>
+      <div style="margin-top: 20px">
+        <p>{{product.description}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="ekart-product-detail-addtoCart">
+    <button class="btn-add-to-cart">AGREGAR AL CARRITO</button>
+  </div>
+</div>
+<div class="overlay"></div>

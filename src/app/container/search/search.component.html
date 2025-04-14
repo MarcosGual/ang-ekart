@@ -1,20 +1,16 @@
 <div class="ekart--search--product">
-  <input
-    type="text"
-    class="ekart-search-product-input"
-    [(ngModel)]="searchText"
-    (input)="onSearchTextChange()"
-  />
-  <button
-    class="btn"
-    [ngClass]="{'btn-search': searchText, 'btn-search-disabled': !searchText}"
-    [disabled]="!searchText"
-  >
+  <input type="text" class="ekart-search-product-input" #searchInput />
+  <!-- [(ngModel)]="searchText"     
+   (input)="onSearchTextChange()"  -> (estaban como atributos en el input) 
+   -->
+  <button class="btn btn-search" (click)="onSearchButtonClick()">
+    <!-- [ngClass]="{ 'btn-search': searchText, 'btn-search-disabled': !searchText }"
+    [disabled]="!searchText" -->
     Buscar
   </button>
 </div>
-<div class="e-kart-search-result-for">
-  <div *ngIf="searchText.length>1">
+<div class="ekart-search-result-for">
+  <div *ngIf="searchText.length > 1">
     <p><strong>Resultado de búsqueda para: </strong> {{ searchText }}</p>
   </div>
 </div>

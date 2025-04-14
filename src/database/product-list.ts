@@ -522,7 +522,7 @@ export const products: Product[] = [
       price: 72,
       is_in_inventory: true,
       items_left: 3,
-      imageURL: "https://images.vans.com/is/image/Vans/MV122M-HERO?$583x583$",
+      imageURL: "https://cdn-images.buyma.com/resizer/item/200625/0055842477/269619559/org.jpg?w=583&h=583",
       slug: "michael-feburary-sk8-hi"
     }
   ];

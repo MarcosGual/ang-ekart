@@ -37,8 +37,8 @@
   cursor: not-allowed;
 }
 
-.ekar-search-result-for {
-    text-align: center;
+.ekart-search-result-for {
+    /* text-align: center; */
   margin: 20px auto;
   padding: 10px 140px;
 }
