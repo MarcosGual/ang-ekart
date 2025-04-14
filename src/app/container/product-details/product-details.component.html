@@ -4,7 +4,7 @@
   </div>
   <div class="ekart-product-details-image">
     <img
-      src="https://cdn-images.buyma.com/resizer/item/200625/0055842477/269619559/org.jpg?w=583&h=583"
+      [src]="product.imageURL"
       alt="zapatillas vans"
       class="ekart-product-details-image"
     />
@@ -12,18 +12,22 @@
 
   <div class="ekart-product-details">
     <div class="ekart-product-details-name">
-      <h2>Michael February SK8-Hi</h2>
+      <h2>{{ product.name }}</h2>
     </div>
     <div class="ekart-product-details-gbc">
-      <span>MEN</span>
-      <span>NIKE</span>
-      <span>SPORTS</span>
+      <span>{{ product.gender }}</span>
+      <span>{{ product.brand }}</span>
+      <span>{{ product.category }}</span>
     </div>
     <div class="ekart-product-details-price">
       <p>
         <b>Precio por Par:</b>
-        <span style="background-color: red; color: white"><s>$699</s></span>
-        <span style="background-color: green; color: white">$599</span>
+        <span style="background-color: red; color: white"
+          ><s>${{ product.price }}</s></span
+        >
+        <span style="background-color: green; color: white"
+          >${{ product.discountPrice }}</span
+        >
         (Impuestos incluidos)
       </p>
     </div>
@@ -32,32 +36,25 @@
         <h4>Tamaños Disponibles</h4>
       </div>
       <div style="margin-top: 20px">
-        <span class="ekart-product-details-available-size">6</span>
-        <span class="ekart-product-details-available-size">7</span>
+        <span
+          class="ekart-product-details-available-size"
+          *ngFor="let size of product.size"
+          >{{ size }}</span
+        >
       </div>
     </div>
     <div class="ekart-product-detail-color">
       <div style="padding: 5px 0px; border-bottom: #ccc 2px solid">
         <h4>Available Color</h4>
       </div>
-      <diV style="margin-top: 20px">
+      <div style="margin-top: 20px">
         <span
+          *ngFor="let color of product.color"
           class="ekart-product-detail-available-color"
-          style="background-color: red"
+          [ngStyle]="{ 'background-color': color.toLowerCase(), 'border': 'solid 1px black'}"
+          [title]="color"
         ></span>
-        <span
-          class="ekart-product-detail-available-color"
-          style="background-color: green"
-        ></span>
-        <span
-          class="ekart-product-detail-available-color"
-          style="background-color: black"
-        ></span>
-        <span
-          class="ekart-product-detail-available-color"
-          style="background-color: blue"
-        ></span>
-      </diV>
+      </div>
     </div>
 
     <div class="ekart-product-detail-desc">
@@ -65,7 +62,7 @@
         <h4>Descripción del Producto</h4>
       </div>
       <div style="margin-top: 20px">
-        <p>DESCRIPCIÓN</p>
+        <p>{{product.description}}</p>
       </div>
     </div>
   </div>
