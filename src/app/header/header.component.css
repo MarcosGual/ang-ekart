@@ -13,6 +13,11 @@
   color: #36454f;
   font-family: "Concert One", cursive;
   width: 20%;
+  cursor: default;
+}
+
+.ekart-logo>span{
+  color: #a6120d;
 }
 
 .ekart--header--nav {
